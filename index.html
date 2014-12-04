@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jq.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            var w = $(document).width();
+            $("#full").width(w);
+            if (w >= 800) { $(".topics").height(300); }
+            if (w < 800) { $(".topics").height(200); $(".topics").css("float", "none"); $(".topics").width(w); }
+            $(window).resize(function () {
+                var w = $(window).width();
+                $("#full").width(w);
+                if (w >= 800) {  $(".topics").height(300); $(".topics").css("float", "left"); $(".topics").width(w / 2); }
+                if (w < 800) { $(".topics").height(200); $(".topics").css("float", "none"); $(".topics").width(w); }
+            });
+            $(".topics,#logo").mouseenter(function () { $(this).css("box-shadow", "black 0px 0px 25px"); });
+            $(".topics,#logo").mouseleave(function () { $(this).css("box-shadow", "black 0px 0px 0px"); });
+        });
+    </script>
+    <style>
+        body{margin:0px;padding:0px;background-image:url('http://i.imgur.com/x0ADh.jpg');background-size:contain}
+        .topics{opacity:.8;}
+    </style>
+</head>
+<body>
+    <div style="height:600px;">
+        <img id="logo" src="PRATIBIMB%20LOGO.png" height="100" />
+
+    </div>
+    <div id="full" style="width:100%">
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:red;min-height:200px;">
+            <span >text1</span>
+        </div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:green;min-height:200px;"></div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:blue;min-height:200px;"></div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:yellow;min-height:200px;"></div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:red;min-height:200px;"></div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:violet;min-height:200px;"></div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:cyan;min-height:200px;"></div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:cornflowerblue;min-height:200px;"></div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:burlywood;min-height:200px;"></div>
+        <div class="topics" style="width:50%;height:50%;float:left;background-color:azure;min-height:200px;"></div>
+    </div>
+</body>
+</html>
